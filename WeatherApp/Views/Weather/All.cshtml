@@ -1,0 +1,17 @@
+﻿@model List<Weather>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>weatherApp</title>
+    <Link rel="stylesheet" href="StyleSheet.css">
+</head>
+<body>
+  @foreach (var w in Model)
+  {
+      <div>
+          <a href="/weather/@w.CityUniqueCode">@w.CityUniqueCode --- @w.CityName --- @w.DateAndTime --- @w.TemperatureFahrenheit</a>
+      </div>
+  }
+</body>
+</html>
